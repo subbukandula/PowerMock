@@ -1,0 +1,14 @@
+First you will have to add this maven dependency:
+
+`<dependency>
+  <groupId>org.powermock</groupId>
+  <artifactId>powermock-module-junit4-rule-agent</artifactId>
+  <version>1.6.4</version>
+  <scope>test</scope>
+</dependency>`
+Then, instead of using this annotation @RunWith(PowerMockRunner.class), just add a @Rule in the Test class like this:
+
+public class Test {
+
+   @Rule
+   public PowerMockRule rule = new PowerMockRule();
